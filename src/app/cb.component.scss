@@ -1,0 +1,30 @@
+.chat-button {
+  display: flex;
+  position: fixed;
+  bottom: -4px;
+  right: 12px;
+}
+
+.iframe-container {
+  position: fixed;
+  bottom: -4px;
+  right: 12px;
+
+  &.active {
+    bottom: auto; /* Adjust position to top */
+    top: 12px;
+  }
+}
+
+iframe {
+  height: 400px; /* Set the desired height for the iframe */
+  width: 100%; /* Ensure the iframe takes full width */
+}
+
+.close-icon,
+.close-icon-iframe {
+  position: absolute;
+  top: 16px; /* Position close icon at top right */
+  right: 12px;
+  cursor: pointer;
+}

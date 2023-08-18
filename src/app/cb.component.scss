@@ -1,8 +1,17 @@
+.container {
+  position: relative;
+}
+
 .chat-button {
   display: flex;
   position: fixed;
   bottom: -4px;
   right: 12px;
+  transition: opacity 0.3s ease; /* Add transition for smooth visibility change */
+
+  .chat-container.iframe-open & {
+    opacity: 0; /* Hide chat button when iframe is open */
+  }
 }
 
 .iframe-container {
@@ -14,8 +23,11 @@
 
   &.active {
     bottom: auto; /* Adjust position to top */
-    top: 10px;
+    top: 350px;
     transform: translateY(100);
+  }
+  .chat-container.iframe-open & {
+    bottom: 10px; /* Adjust positioning when iframe is open */
   }
 }
 

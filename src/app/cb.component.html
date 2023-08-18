@@ -1,24 +1,25 @@
-<div class="chat-container">
-  <button mat-button class="chat-button" (click)="toggleChat()">
-    <img
-      src="https://img.freepik.com/free-vector/cute-robot-flying-cartoon-illustration-people-technology-icon-concept_138676-1892.jpg?w=740&t=st%3D1692173479%7Eexp%3D1692174079%7Ehmac%3Deb880893b7b75d60425ff39bee3600b84e634529cb9ebf8e45ff7761cc2c84ab"
-      alt="Chat-Robot"
-      style="width: 100px; height: auto; position: fixed; bottom: -4px; right: 12px; padding: 5px;"
-    />
-
-    <ng-container *ngIf="!showChat; else closeIcon"> </ng-container>
-
-    <ng-template #closeIcon
-      ><span class="close-icon" (click)="toggleChat()">X</span></ng-template
-    >
-  </button>
-
-  <div class="iframe-container" [hidden]="!showChat">
-    <div class="chatbot-header">Chatbot</div>
-    <!-- Add the header with the class -->
-    <iframe
-      src="https://webchat.botframework.com/embed/CTSAIchat-bot?s=JNC_nGq3piI.0W3LY2KvfhbU0RSfk0N-3rRk-ft8f2VTuxhLkqc75sU"
-    ></iframe>
-    <span class="close-icon-iframe" (click)="toggleChat()">X</span>
+<div class="container">
+  <div class="chat-container" [ngClass]="{ 'iframe-open': showChat }">
+    <button mat-button class="chat-button" (click)="toggleChat()">
+      <img
+        src="https://img.freepik.com/free-vector/cute-robot-flying-cartoon-illustration-people-technology-icon-concept_138676-1892.jpg?w=740&t=st%3D1692173479%7Eexp%3D1692174079%7Ehmac%3Deb880893b7b75d60425ff39bee3600b84e634529cb9ebf8e45ff7761cc2c84ab"
+        alt="Chat-Robot"
+        style="width: 100px; height: auto; position: fixed; bottom: -4px; right: 12px; padding: 5px;"
+      />
+      <ng-container *ngIf="!iframeOpened; else closeIcon">
+        <span class="close-icon" (click)="toggleChat()">x</span>
+      </ng-container>
+      <ng-template #closeIcon>
+        <span class="close-icon" (click)="toggleChat()">x</span>
+      </ng-template>
+    </button>
+    <div class="iframe-container" [ngClass]="{ active: showChat }">
+      <div class="chatbot-header" *ngIf="iframeOpened">Chatbot</div>
+      <iframe
+        *ngIf="iframeOpened"
+        src="https://webchat.botframework.com/embed/CTSAIchat-bot?s=JNC_nGq3piI.0W3LY2KvfhbU0RSfk0N-3rRk-ft8f2VTuxhLkqc75sU"
+      ></iframe>
+      <span class="close-icon-iframe" (click)="closeChat()">X</span>
+    </div>
   </div>
 </div>

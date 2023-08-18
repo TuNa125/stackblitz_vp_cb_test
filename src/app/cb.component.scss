@@ -39,7 +39,22 @@
   border-top-left-radius: 10px; /* Ensure the header curvature matches iframe */
   border-top-right-radius: 10px;
   position: relative;
-}
+  display: flex;
+  align-items: center;
+
+  .chatbot-header img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  }
+    .chatbot-header span {
+      font-weight: bold;
+      display: inline-block; /* Maintain vertical alignment */
+      vertical-align: middle; /* Align the text vertically */
+    }
+  }
+
 
 iframe {
   height: 400px; /* Set the desired height for the iframe */

@@ -31,7 +31,10 @@
 
 iframe {
   height: 400px; /* Set the desired height for the iframe */
-  width: 100%; /* Ensure the iframe takes full width */
+  width: 300px; /* Ensure the iframe takes full width */
+  border: 1px;
+  border-style: solid;
+  border-color: black;
   /* Styling for the iframe */
 }
 

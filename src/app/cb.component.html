@@ -2,7 +2,7 @@
   <div class="chat-container" [ngClass]="{ 'iframe-open': showChat }">
     <button mat-button class="chat-button" (click)="toggleChat()">
       <img
-        src="https://img.freepik.com/free-vector/cute-robot-flying-cartoon-illustration-people-technology-icon-concept_138676-1892.jpg?w=740&t=st%3D1692173479%7Eexp%3D1692174079%7Ehmac%3Deb880893b7b75d60425ff39bee3600b84e634529cb9ebf8e45ff7761cc2c84ab"
+        src="chatbot.png"
         alt="Chat-Robot"
         style="width: 100px; height: auto; position: fixed; bottom: -4px; right: 12px; padding: 5px;"
       />
@@ -14,12 +14,22 @@
       </ng-template>
     </button>
     <div class="iframe-container" [ngClass]="{ active: showChat }">
-      <div class="chatbot-header" *ngIf="iframeOpened" style="display: flex; align-items: center;">
-        <img src="https://img.freepik.com/free-vector/cute-robot-flying-cartoon-illustration-people-technology-icon-concept_138676-1892.jpg?w=740&t=st%3D1692173479%7Eexp%3D1692174079%7Ehmac%3Deb880893b7b75d60425ff39bee3600b84e634529cb9ebf8e45ff7761cc2c84ab"
-        alt="Chat-Robot"
-        style="width: 30px; height: 30px; margin-right: 10px;"> <!-- Add margin for spacing -->
-    <span style="font-weight: bold; inline-block; vertical-align: middle;">Tech Bot</span> <!-- Apply font-weight to the text -->
-  </div>
+      <div
+        class="chatbot-header"
+        *ngIf="iframeOpened"
+        style="display: flex; align-items: center;"
+      >
+        <img
+          src="chatbot.png"
+          alt="Chat-Robot"
+          style="width: 30px; height: 30px; margin-right: 10px;"
+        />
+        <!-- Add margin for spacing -->
+        <span style="font-weight: bold; inline-block; vertical-align: middle;"
+          >Tech Bot</span
+        >
+        <!-- Apply font-weight to the text -->
+      </div>
       <iframe
         *ngIf="iframeOpened"
         src="https://webchat.botframework.com/embed/CTSAIchat-bot?s=JNC_nGq3piI.0W3LY2KvfhbU0RSfk0N-3rRk-ft8f2VTuxhLkqc75sU"

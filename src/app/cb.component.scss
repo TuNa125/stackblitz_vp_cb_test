@@ -23,7 +23,7 @@
 
   &.active {
     bottom: auto; /* Adjust position to top */
-    top: 350px;
+    top: 500px;
     transform: translateY(100);
   }
   .chat-container.iframe-open & {

@@ -19,6 +19,11 @@
 iframe {
   height: 400px; /* Set the desired height for the iframe */
   width: 100%; /* Ensure the iframe takes full width */
+  /* Styling for the iframe */
+
+  border-radius: 10px; /* Adjust the value for desired curvature */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the values for shadow effect */
+  /* Additional styling properties for the chatbox iframe */
 }
 
 .close-icon,

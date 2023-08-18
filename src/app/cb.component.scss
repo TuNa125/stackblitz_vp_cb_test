@@ -6,13 +6,16 @@
 }
 
 .iframe-container {
+  /* Keep the existing styles */
   position: fixed;
-  bottom: -4px;
+  bottom: 10px; /* Adjust the distance from bottom */
   right: 12px;
+  transform: translateY(0%);
 
   &.active {
     bottom: auto; /* Adjust position to top */
-    top: 12px;
+    top: 10px;
+    transform: translateY(100);
   }
 }
 
@@ -23,23 +26,21 @@
   font-weight: bold; /* Optionally adjust font weight */
   border-top-left-radius: 10px; /* Ensure the header curvature matches iframe */
   border-top-right-radius: 10px;
+  position: relative;
 }
-
 
 iframe {
   height: 400px; /* Set the desired height for the iframe */
   width: 100%; /* Ensure the iframe takes full width */
   /* Styling for the iframe */
-
-  border-radius: 10px; /* Adjust the value for desired curvature */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the values for shadow effect */
-  /* Additional styling properties for the chatbox iframe */
 }
 
 .close-icon,
 .close-icon-iframe {
   position: absolute;
+  color: white;
   top: 18px; /* Position close icon at top right */
+  transform: translateY(-50%);
   right: 12px;
   cursor: pointer;
 }

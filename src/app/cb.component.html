@@ -14,19 +14,31 @@
         *ngIf="iframeOpened"
         style="display: flex; align-items: center;"
       >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2597/2597330.png"
+          alt="Bot Icon"
+          style="width: 30px; height: 30px; margin-right: 10px;"
+        />
+
         <!-- Add margin for spacing -->
-        <span style="font-weight: bold; inline-block; vertical-align: middle;"
-          >Tech Bot</span
-        >
+        <span style="display: flex; bottom: 2px;">Tech Bot</span>
         <!-- Apply font-weight to the text -->
       </div>
       <iframe
         *ngIf="iframeOpened"
         src="https://webchat.botframework.com/embed/CTSAIchat-bot?s=JNC_nGq3piI.0W3LY2KvfhbU0RSfk0N-3rRk-ft8f2VTuxhLkqc75sU"
       ></iframe>
-      <span class="close-icon-iframe" *ngIf="iframeOpened" (click)="closeChat()"
-        >X</span
+      <span
+        class="close-icon-iframe"
+        *ngIf="iframeOpened"
+        (click)="closeChat()"
       >
+        <img
+          src="https://img.icons8.com/?size=512&id=41636&format=png"
+          alt="Bot Icon"
+          style="width: 20px;  height: 20px; position: fixed; right: 10px;"
+        />
+      </span>
     </div>
   </div>
 </div>

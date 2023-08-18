@@ -50,8 +50,9 @@
   }
     .chatbot-header span {
       font-weight: bold;
-      display: inline-block; /* Maintain vertical alignment */
       vertical-align: middle; /* Align the text vertically */
+      display: flex;
+      bottom: 2px;
     }
   }
 

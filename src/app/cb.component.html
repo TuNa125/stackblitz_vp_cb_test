@@ -6,7 +6,6 @@
         alt="Chat-Robot"
         style="width: 80px; height: 80px; position: fixed; bottom: 4px; right: 8px; padding: 5px;"
       />
-      <ng-container *ngIf="!iframeOpened; else closeIcon"> </ng-container>
     </button>
     <div class="iframe-container" [ngClass]="{ active: showChat }">
       <div
@@ -20,9 +19,7 @@
           style="width: 40px; height: 40px; margin-right: 10px;"
         />
 
-        <!-- Add margin for spacing -->
         <span class="bot-label">Tech Bot</span>
-        <!-- Apply font-weight to the text -->
       </div>
       <iframe
         *ngIf="iframeOpened"

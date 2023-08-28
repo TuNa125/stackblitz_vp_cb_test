@@ -7,10 +7,9 @@
   position: fixed;
   bottom: -4px;
   right: 12px;
-  transition: opacity 0.3s ease; /* Add transition for smooth visibility change */
 
   .chat-container.iframe-open & {
-    opacity: 0; /* Hide chat button when iframe is open */
+    opacity: 0;
   }
 }
 
